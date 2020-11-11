@@ -702,6 +702,10 @@ function refreshCards() {
 		placement: 'bottom'
 	});
 
+	if (typeof ga !== 'undefined') {
+		ga('send', 'event', 'cards', 'refresh');
+	}
+
 	return false;
 }
 
