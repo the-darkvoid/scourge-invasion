@@ -1,3 +1,5 @@
+var tuning = 60;
+
 var rares = [
 	{
 		name: "Elder Nadox",
@@ -166,13 +168,14 @@ var html = `
 		<div class="card mb-4 box-shadow">
 			<img class="card-img-top" src="{{img}}" alt="{{name}}">
 			<div class="card-body">
-				<h3>{{name}}</h3>
+				<h3><a href="#" data-wowhead="npc={{id}}">{{name}}</a></h3>
 				<p class="card-text">{{desc}}</p>
 				<div class="d-flex justify-content-between align-items-center">
 					<div class="btn-group">
-						<button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+						<button type="button" class="waypoint btn btn-sm btn-outline-primary" data-clipboard-text="/way {{way}}">Way Point</button>
 					</div>
-					<small class="text-muted">{{nextSpawn}}</small>
+
+					<small class="text-muted">{{nextSpawnDuration}} @ {{nextSpawn}}</small>
 				</div>
 			</div>
 		</div>
@@ -188,10 +191,13 @@ function nextSpawn(rare)
 		spawnTimer.add(400, 'minutes');
 	}
 
+	spawnTimer.add(tuning, 'seconds');
+
 	var duration = moment.duration(spawnTimer.diff(currentDate));
 
 	rare.nextSpawnMins = Math.round(duration.asMinutes());
-	rare.nextSpawn = duration.humanize();
+	rare.nextSpawnDuration = duration.humanize();
+	rare.nextSpawn = spawnTimer.format("HH:mm");
 	//if (spawnTimer < current)
 
 }
@@ -203,8 +209,18 @@ function calculateSpawns()
 	}
 }
 
-function generateCard(rare)
-{
+function setTooltip(button, message) {
+
+	$(button).tooltip('hide')
+		.attr('data-original-title', message)
+		.tooltip('show');
+}
+
+function hideTooltip() {
+
+	setTimeout(function() {
+		$('button').tooltip('hide');
+	}, 1000);
 
 }
 
@@ -218,13 +234,26 @@ $(function() {
 	// compile the template
 	var template = Handlebars.compile(html);
 
-
 	// execute the compiled template and print the output to the console
 	for (rare of rares) {
 		$("#cards").append(template(rare));
 	}
 
-//	generateCard(rares[0]);
-	//alert('test');
+	$('.waypoint').tooltip({
+		trigger: 'click',
+		placement: 'bottom'
+	});
+
+	var clipboard = new ClipboardJS('.waypoint');
+
+	clipboard.on('success', function(e) {
+		setTooltip(e.trigger, 'Copied!');
+		hideTooltip();
+	});
+	
+	clipboard.on('error', function(e) {
+		setTooltip(e.trigger, 'Failed!');
+		hideTooltip();
+	});
 })
 
