@@ -185,13 +185,13 @@ var html = `
 function nextSpawn(rare)
 {
 	var spawnTimer = new moment(rare.timer);
+	spawnTimer.add(tuning, 'seconds');
+
 	var currentDate = new moment();
 
 	while (spawnTimer < currentDate) {
 		spawnTimer.add(400, 'minutes');
 	}
-
-	spawnTimer.add(tuning, 'seconds');
 
 	var duration = moment.duration(spawnTimer.diff(currentDate));
 
