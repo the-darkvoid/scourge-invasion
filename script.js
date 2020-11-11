@@ -60,7 +60,7 @@ var rares = [
 	{
 		name: "Ingvar the Plunderer",
 		img: "images/ingvar-the-plunderer.png",
-		desc: "",
+		desc: "Ingvar the Plunderer, commander of the dragon forces, is the third and last boss in Utgarde Keep.",
 		way: "52.4 52.6",
 		timer: "2020-11-11T14:20:00Z",
 		id: 174061
@@ -68,7 +68,7 @@ var rares = [
 	{
 		name: "Prince Keleseth",
 		img: "images/prince-keleseth.png",
-		desc: "",
+		desc: "Prince Keleseth, a darkfallen, is the first boss of Utgarde Keep.",
 		way: "54.0 44.7",
 		timer: "2020-11-11T14:40:00Z",
 		id: 174060
@@ -76,7 +76,7 @@ var rares = [
 	{
 		name: "The Black Knight",
 		img: "images/the-black-knight.png",
-		desc: "",
+		desc: "The Black Knight is the third and last boss of the Trial of the Champion.",
 		way: "64.8 22.1",
 		timer: "2020-11-11T15:00:00Z",
 		id: 174059
@@ -84,7 +84,7 @@ var rares = [
 	{
 		name: "Bronjahm",
 		img: "images/bronjahm.png",
-		desc: "",
+		desc: "Bronhahm, the Godfather of Souls, is the first boss in The Forge of Souls.",
 		way: "70.7 38.4",
 		timer: "2020-11-11T15:20:00Z",
 		id: 174058
@@ -92,7 +92,7 @@ var rares = [
 	{
 		name: "Scourgelord Tyrannus",
 		img: "images/scourgelord-tyrannus.png",
-		desc: "",
+		desc: "Scourgelord Tyrannus is a human Death Knight riding the frost wyrm Rimefang.",
 		way: "47.2 66.1",
 		timer: "2020-11-11T15:40:00Z",
 		id: 174057
@@ -100,7 +100,7 @@ var rares = [
 	{
 		name: "Forgemaster Garfrost",
 		img: "images/forgemaster-garfrost.png",
-		desc: "",
+		desc: "Forgemaster Garfrost is a flesh giant covered with ice, whose duty is to forge saronite weapons and armor for the Scourge.",
 		way: "58.6 72.5",
 		timer: "2020-11-11T16:00:00Z",
 		id: 174056
@@ -108,7 +108,7 @@ var rares = [
 	{
 		name: "Marwyn",
 		img: "images/marwyn.png",
-		desc: "",
+		desc: "Marwyn, Arthas Menethil's second captain, is the second boss in the Halls of Reflection.",
 		way: "58.2 83.4",
 		timer: "2020-11-11T16:20:00Z",
 		id: 174055
@@ -116,7 +116,7 @@ var rares = [
 	{
 		name: "Falric",
 		img: "images/falric.png",
-		desc: "",
+		desc: "Falric, a captain for Arthas in both life and death, is the first boss in the Halls of Reflection.",
 		way: "50.2 87.9",
 		timer: "2020-11-11T16:40:00Z",
 		id: 174054
@@ -124,7 +124,7 @@ var rares = [
 	{
 		name: "The Prophet Tharon'ja",
 		img: "images/the-prophet-tharonja.png",
-		desc: "",
+		desc: "Prophet Tharon'ja, a skeletal wind serpent, is the last boss of Drak'Tharon Keep.",
 		way: "80.1 61.2",
 		timer: "2020-11-11T17:00:00Z",
 		id: 174053
@@ -132,7 +132,7 @@ var rares = [
 	{
 		name: "Novos the Summoner",
 		img: "images/novos-the-summoner.png",
-		desc: "",
+		desc: "Novos the Summoner, a lich, is the second boss of Drak'Tharon Keep.",
 		way: "77.8 66.1",
 		timer: "2020-11-11T17:20:00Z",
 		id: 174052
@@ -140,7 +140,7 @@ var rares = [
 	{
 		name: "Trollgore",
 		img: "images/trollgore.png",
-		desc: "",
+		desc: "Trollgore, a dire troll, is the first boss of Drak'Tharon Keep.",
 		way: "58.3 39.4",
 		timer: "2020-11-11T17:40:00Z",
 		id: 174051
@@ -148,7 +148,7 @@ var rares = [
 	{
 		name: "Krik'thir the Gatewatcher",
 		img: "images/krikthir-the-gatewatcher.png",
-		desc: "",
+		desc: "Krik'thir the Gatewatcher is the first boss of Azjol-Nerub.",
 		way: "67.5 58.0",
 		timer: "2020-11-11T18:00:00Z",
 		id: 174050
@@ -156,7 +156,7 @@ var rares = [
 	{
 		name: "Prince Taldaram",
 		img: "images/prince-taldaram.png",
-		desc: "",
+		desc: "Prince Taldaram, a vampiric darkfallen, is the second boss of Ahn'kahet: The Old Kingdom.",
 		way: "29.6 62.2",
 		timer: "2020-11-11T18:20:00Z",
 		id: 174049
@@ -168,7 +168,7 @@ var html = `
 		<div class="card mb-4 box-shadow">
 			<img class="card-img-top" src="{{img}}" alt="{{name}}">
 			<div class="card-body">
-				<h3><a href="#" data-wowhead="npc={{id}}">{{name}}</a></h3>
+				<h3><a href="https://www.wowhead.com/npc={{id}}/" target="_blank" data-wowhead="npc={{id}}">{{name}}</a></h3>
 				<p class="card-text">{{desc}}</p>
 				<div class="d-flex justify-content-between align-items-center">
 					<div class="btn-group">
