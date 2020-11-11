@@ -3,8 +3,16 @@
 
 <head>
 	<title>Shadowlands Icecrown Rares</title>
-	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootswatch/4.5.2/darkly/bootstrap.min.css"
-		integrity="sha384-nNK9n28pDUDDgIiIqZ/MiyO3F4/9vsMtReZK39klb/MtkZI3/LtjSjlmyVPS3KdN" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootswatch/4.5.2/darkly/bootstrap.min.css" integrity="sha384-nNK9n28pDUDDgIiIqZ/MiyO3F4/9vsMtReZK39klb/MtkZI3/LtjSjlmyVPS3KdN" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+
+	<style>
+		img.card-img-top {
+			width: 300px;
+			height: 300px;
+			margin: auto;
+		}
+	</style>
 
 	<!-- Global site tag (gtag.js) - Google Analytics -->
 	<script async src="https://www.googletagmanager.com/gtag/js?id=G-RFH2EZDY77"></script>
@@ -33,7 +41,11 @@
 			<p class="lead">
 			This site shows the Icecrown rare rotation for the Scourge Invasion.<br/>
 			It sorts the rares in order of appearance and shows the time remaining until spawn, as well as the spawn time in your local time.</p>
-			<p class="lead">Refresh the page to get the latest timings.</p>
+			<p class="lead">
+				<button type="button" class="btn btn-primary" onclick="refreshCards();">
+					<i class="fa fa-refresh"></i>&nbsp;&nbsp;Refresh
+				</button>
+			</p>
 		</div>
 		
 		<div class="album py-5 bg-light">

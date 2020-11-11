@@ -680,7 +680,9 @@ function hideTooltip() {
 
 }
 
-$(function() {
+function refreshCards() {
+	$("#cards").empty();
+
 	// Calculate upcoming spawn timers
 	calculateSpawns();
 
@@ -699,6 +701,12 @@ $(function() {
 		trigger: 'click',
 		placement: 'bottom'
 	});
+
+	return false;
+}
+
+$(function() {
+	refreshCards();
 
 	var clipboard = new ClipboardJS('.waypoint');
 
