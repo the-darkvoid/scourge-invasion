@@ -634,7 +634,7 @@ var rares = [
 
 var html = `
 	<div class="col-md-4">
-		<div class="card mb-4 box-shadow">
+		<div class="card mb-4 box-shadow" data-clarity-unmask="True">
 			<img class="card-img-top" src="{{img}}" alt="{{name}}">
 			<div class="card-body">
 				<h3><a href="https://www.wowhead.com/npc={{id}}/" target="_blank" data-wowhead="npc={{id}}">{{name}}</a></h3>
@@ -751,7 +751,7 @@ $(function() {
 		rareTimer.add((index - initIndex) * 20, 'minutes');
 
 		rare.timer = rareTimer.toISOString();
-		rare.img = document.URL + rare.img;
+		//rare.img = document.URL + rare.img;
 	});
 
 	refreshCards();
