@@ -297,7 +297,7 @@ var rares = [
 	{
 		name: "Bronjahm",
 		img: "images/bronjahm.png",
-		desc: "Bronhahm, the Godfather of Souls, is the first boss in The Forge of Souls. He can drop <a href=\"https://www.wowhead.com/item=183634/\" target=\"_blank\" data-wowhead=\"item=183634\">Papa's Mint Condition bag</a>.",
+		desc: "Bronjahm, the Godfather of Souls, is the first boss in The Forge of Souls. He can drop <a href=\"https://www.wowhead.com/item=183634/\" target=\"_blank\" data-wowhead=\"item=183634\">Papa's Mint Condition bag</a>.",
 		way: {
 			x: 70.7,
 			y: 38.4
