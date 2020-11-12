@@ -165,7 +165,7 @@ var rares = [
 	{
 		name: "Skadi the Ruthless",
 		img: "images/skadi-the-ruthless.png",
-		desc: "Skadi the Ruthless is the third boss in Utgarde Pinnacle.",
+		desc: "Skadi the Ruthless is the third boss in Utgarde Pinnacle. He can drop the mount <a href=\"https://www.wowhead.com/item=44151/\" target=\"_blank\" data-wowhead=\"item=44151\">Reins of the Blue Proto-Drake</a>.",
 		way: {
 			x: 57.8,
 			y: 56.1
@@ -297,7 +297,7 @@ var rares = [
 	{
 		name: "Bronjahm",
 		img: "images/bronjahm.png",
-		desc: "Bronhahm, the Godfather of Souls, is the first boss in The Forge of Souls. He drops <a href=\"https://www.wowhead.com/item={{id}}/\" target=\"_blank\" data-wowhead=\"item=183634\">Papa's Mint Condition bag</a>.",
+		desc: "Bronhahm, the Godfather of Souls, is the first boss in The Forge of Souls. He can drop <a href=\"https://www.wowhead.com/item=183634/\" target=\"_blank\" data-wowhead=\"item=183634\">Papa's Mint Condition bag</a>.",
 		way: {
 			x: 70.7,
 			y: 38.4
