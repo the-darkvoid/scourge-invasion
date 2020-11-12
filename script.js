@@ -18,23 +18,28 @@ var rares = [
 		loot: [
 			{
 				id: 183642,
-				name: "Robes of Rasped Breaths"
+				name: "Robes of Rasped Breaths",
+				ilvl: 110
 			},
 			{
 				id: 183676,
-				name: "Hailstone Loop"
+				name: "Hailstone Loop",
+				ilvl: 110
 			},
 			{
 				id: 183654,
-				name: "Etched Dragonbone Stompers"
+				name: "Etched Dragonbone Stompers",
+				ilvl: 110
 			},
 			{
 				id: 183200,
-				name: "Pitch Black Scourgestone"
+				name: "Pitch Black Scourgestone",
+				ilvl: 1
 			},
 			{
 				id: 183616,
-				name: "Accursed Keepsake"
+				name: "Accursed Keepsake",
+				ilvl: 1
 			}
 		]
 	},
@@ -50,23 +55,28 @@ var rares = [
 		loot: [
 			{
 				id: 183645,
-				name: "Cinch of the Tortured"
+				name: "Cinch of the Tortured",
+				ilvl: 110
 			},
 			{
 				id: 183644,
-				name: "Regurgitator's Shoulderpads"
+				name: "Regurgitator's Shoulderpads",
+				ilvl: 110
 			},
 			{
 				id: 183643,
-				name: "Severance of Mortality"
+				name: "Severance of Mortality",
+				ilvl: 110
 			},
 			{
 				id: 183200,
-				name: "Pitch Black Scourgestone"
+				name: "Pitch Black Scourgestone",
+				ilvl: 1
 			},
 			{
 				id: 183616,
-				name: "Accursed Keepsake"
+				name: "Accursed Keepsake",
+				ilvl: 1
 			}
 		]
 	},
@@ -82,23 +92,28 @@ var rares = [
 		loot: [
 			{
 				id: 183646,
-				name: "Chestguard of Siphoned Vitality"
+				name: "Chestguard of Siphoned Vitality",
+				ilvl: 110
 			},
 			{
 				id: 183648,
-				name: "Veincrusher Gauntlets"
+				name: "Veincrusher Gauntlets",
+				ilvl: 110
 			},
 			{
 				id: 183647,
-				name: "Bloodspatter"
+				name: "Bloodspatter",
+				ilvl: 110
 			},
 			{
 				id: 183200,
-				name: "Pitch Black Scourgestone"
+				name: "Pitch Black Scourgestone",
+				ilvl: 1
 			},
 			{
 				id: 183616,
-				name: "Accursed Keepsake"
+				name: "Accursed Keepsake",
+				ilvl: 1
 			}
 		]
 	},
@@ -114,23 +129,28 @@ var rares = [
 		loot: [
 			{
 				id: 183649,
-				name: "Bag of Discarded Entrails"
+				name: "Bag of Discarded Entrails",
+				ilvl: 110
 			},
 			{
 				id: 183651,
-				name: "Chestplate of Septic Sutures"
+				name: "Chestplate of Septic Sutures",
+				ilvl: 110
 			},
 			{
 				id: 183650,
-				name: "Miniscule Abomination in a Jar"
+				name: "Miniscule Abomination in a Jar",
+				ilvl: 110
 			},
 			{
 				id: 183200,
-				name: "Pitch Black Scourgestone"
+				name: "Pitch Black Scourgestone",
+				ilvl: 1
 			},
 			{
 				id: 183616,
-				name: "Accursed Keepsake"
+				name: "Accursed Keepsake",
+				ilvl: 1
 			}
 		]
 	},
@@ -146,23 +166,28 @@ var rares = [
 		loot: [
 			{
 				id: 183652,
-				name: "Zod's Echoing Longbow"
+				name: "Zod's Echoing Longbow",
+				ilvl: 110
 			},
 			{
 				id: 183653,
-				name: "Deathwhisper Vestment"
+				name: "Deathwhisper Vestment",
+				ilvl: 110
 			},
 			{
 				id: 183655,
-				name: "Handgrips of Rime and Sleet"
+				name: "Handgrips of Rime and Sleet",
+				ilvl: 110
 			},
 			{
 				id: 183200,
-				name: "Pitch Black Scourgestone"
+				name: "Pitch Black Scourgestone",
+				ilvl: 1
 			},
 			{
 				id: 183616,
-				name: "Accursed Keepsake"
+				name: "Accursed Keepsake",
+				ilvl: 1
 			}
 		]
 	},
@@ -178,27 +203,33 @@ var rares = [
 		loot: [
 			{
 				id: 44151,
-				name: "Reins of the Blue Proto-Drake"
+				name: "Reins of the Blue Proto-Drake",
+				ilvl: 0
 			},
 			{
 				id: 183670,
-				name: "Skadi's Saronite Belt"
+				name: "Skadi's Saronite Belt",
+				ilvl: 110
 			},
 			{
 				id: 183656,
-				name: "Drake Rider's Jerkin"
+				name: "Drake Rider's Jerkin",
+				ilvl: 110
 			},
 			{
 				id: 183657,
-				name: "Skadi's Scaled Sollerets"
+				name: "Skadi's Scaled Sollerets",
+				ilvl: 110
 			},
 			{
 				id: 183200,
-				name: "Pitch Black Scourgestone"
+				name: "Pitch Black Scourgestone",
+				ilvl: 1
 			},
 			{
 				id: 183616,
-				name: "Accursed Keepsake"
+				name: "Accursed Keepsake",
+				ilvl: 1
 			}
 		]
 	},
@@ -214,23 +245,28 @@ var rares = [
 		loot: [
 			{
 				id: 183668,
-				name: "Razor-Barbed Leather Belt"
+				name: "Razor-Barbed Leather Belt",
+				ilvl: 110
 			},
 			{
 				id: 183659,
-				name: "Annhylde's Band"
+				name: "Annhylde's Band",
+				ilvl: 110
 			},
 			{
 				id: 183658,
-				name: "Ingvar's Monolithic Skullcleaver"
+				name: "Ingvar's Monolithic Skullcleaver",
+				ilvl: 110
 			},
 			{
 				id: 183200,
-				name: "Pitch Black Scourgestone"
+				name: "Pitch Black Scourgestone",
+				ilvl: 1
 			},
 			{
 				id: 183616,
-				name: "Accursed Keepsake"
+				name: "Accursed Keepsake",
+				ilvl: 1
 			}
 		]
 	},
@@ -246,23 +282,28 @@ var rares = [
 		loot: [
 			{
 				id: 183680,
-				name: "Royal Sanguine Cloak"
+				name: "Royal Sanguine Cloak",
+				ilvl: 110
 			},
 			{
 				id: 183678,
-				name: "Keleseth's Influencer"
+				name: "Keleseth's Influencer",
+				ilvl: 110
 			},
 			{
 				id: 183661,
-				name: "Drake Stabler's Gauntlets"
+				name: "Drake Stabler's Gauntlets",
+				ilvl: 110
 			},
 			{
 				id: 183200,
-				name: "Pitch Black Scourgestone"
+				name: "Pitch Black Scourgestone",
+				ilvl: 1
 			},
 			{
 				id: 183616,
-				name: "Accursed Keepsake"
+				name: "Accursed Keepsake",
+				ilvl: 1
 			}
 		]
 	},
@@ -278,23 +319,28 @@ var rares = [
 		loot: [
 			{
 				id: 183638,
-				name: "Phantasmic Kris"
+				name: "Phantasmic Kris",
+				ilvl: 110
 			},
 			{
 				id: 183637,
-				name: "Shoulderpads of the Notorious Knave"
+				name: "Shoulderpads of the Notorious Knave",
+				ilvl: 110
 			},
 			{
 				id: 183636,
-				name: "Helm of the Violent Fracas"
+				name: "Helm of the Violent Fracas",
+				ilvl: 110
 			},
 			{
 				id: 183200,
-				name: "Pitch Black Scourgestone"
+				name: "Pitch Black Scourgestone",
+				ilvl: 1
 			},
 			{
 				id: 183616,
-				name: "Accursed Keepsake"
+				name: "Accursed Keepsake",
+				ilvl: 1
 			}
 		]
 	},
@@ -310,27 +356,33 @@ var rares = [
 		loot: [
 			{
 				id: 183634,
-				name: "Papa's Mint Condition Bag"
+				name: "Papa's Mint Condition Bag",
+				ilvl: 0
 			},
 			{
 				id: 183675,
-				name: "Cold Sweat Mitts"
+				name: "Cold Sweat Mitts",
+				ilvl: 110
 			},
 			{
 				id: 183639,
-				name: "Gaze of Bewilderment"
+				name: "Gaze of Bewilderment",
+				ilvl: 110
 			},
 			{
 				id: 183635,
-				name: "Grieving Gauntlets"
+				name: "Grieving Gauntlets",
+				ilvl: 110
 			},
 			{
 				id: 183200,
-				name: "Pitch Black Scourgestone"
+				name: "Pitch Black Scourgestone",
+				ilvl: 1
 			},
 			{
 				id: 183616,
-				name: "Accursed Keepsake"
+				name: "Accursed Keepsake",
+				ilvl: 1
 			}
 		]
 	},
@@ -346,23 +398,28 @@ var rares = [
 		loot: [
 			{
 				id: 183674,
-				name: "Rimewoven Pantaloons"
+				name: "Rimewoven Pantaloons",
+				ilvl: 110
 			},
 			{
 				id: 183633,
-				name: "Fringed Wyrmleather Leggings"
+				name: "Fringed Wyrmleather Leggings",
+				ilvl: 110
 			},
 			{
 				id: 183632,
-				name: "Protector of Stolen Souls"
+				name: "Protector of Stolen Souls",
+				ilvl: 110
 			},
 			{
 				id: 183200,
-				name: "Pitch Black Scourgestone"
+				name: "Pitch Black Scourgestone",
+				ilvl: 1
 			},
 			{
 				id: 183616,
-				name: "Accursed Keepsake"
+				name: "Accursed Keepsake",
+				ilvl: 1
 			}
 		]
 	},
@@ -378,23 +435,28 @@ var rares = [
 		loot: [
 			{
 				id: 183666,
-				name: "Legguards of the Frosty Fathoms"
+				name: "Legguards of the Frosty Fathoms",
+				ilvl: 110
 			},
 			{
 				id: 183631,
-				name: "Ring of Carnelian and Sinew"
+				name: "Ring of Carnelian and Sinew",
+				ilvl: 110
 			},
 			{
 				id: 183630,
-				name: "Garfrost's Two-Ton Bludgeon"
+				name: "Garfrost's Two-Ton Bludgeon",
+				ilvl: 110
 			},
 			{
 				id: 183200,
-				name: "Pitch Black Scourgestone"
+				name: "Pitch Black Scourgestone",
+				ilvl: 1
 			},
 			{
 				id: 183616,
-				name: "Accursed Keepsake"
+				name: "Accursed Keepsake",
+				ilvl: 1
 			}
 		]
 	},
@@ -410,23 +472,28 @@ var rares = [
 		loot: [
 			{
 				id: 183687,
-				name: "Frayed Flesh-Stitched Shoulderguards"
+				name: "Frayed Flesh-Stitched Shoulderguards",
+				ilvl: 110
 			},
 			{
 				id: 183663,
-				name: "Sightless Capuchin of Ulmaas"
+				name: "Sightless Capuchin of Ulmaas",
+				ilvl: 110
 			},
 			{
 				id: 183662,
-				name: "Frostsworn Rattleshirt"
+				name: "Frostsworn Rattleshirt",
+				ilvl: 110
 			},
 			{
 				id: 183200,
-				name: "Pitch Black Scourgestone"
+				name: "Pitch Black Scourgestone",
+				ilvl: 1
 			},
 			{
 				id: 183616,
-				name: "Accursed Keepsake"
+				name: "Accursed Keepsake",
+				ilvl: 1
 			}
 		]
 	},
@@ -442,23 +509,28 @@ var rares = [
 		loot: [
 			{
 				id: 183664,
-				name: "Bracer of Ground Molars"
+				name: "Bracer of Ground Molars",
+				ilvl: 110
 			},
 			{
 				id: 183665,
-				name: "Valonforth's Marred Pauldrons"
+				name: "Valonforth's Marred Pauldrons",
+				ilvl: 110
 			},
 			{
 				id: 183667,
-				name: "Geistslicer"
+				name: "Geistslicer",
+				ilvl: 110
 			},
 			{
 				id: 183200,
-				name: "Pitch Black Scourgestone"
+				name: "Pitch Black Scourgestone",
+				ilvl: 1
 			},
 			{
 				id: 183616,
-				name: "Accursed Keepsake"
+				name: "Accursed Keepsake",
+				ilvl: 1
 			}
 		]
 	},
@@ -474,23 +546,28 @@ var rares = [
 		loot: [
 			{
 				id: 183686,
-				name: "Breeches of the Skeletal Serpent"
+				name: "Breeches of the Skeletal Serpent",
+				ilvl: 110
 			},
 			{
 				id: 183685,
-				name: "Phantasmic Seal of the Prophet"
+				name: "Phantasmic Seal of the Prophet",
+				ilvl: 110
 			},
 			{
 				id: 183684,
-				name: "Tharon'ja's Protectorate"
+				name: "Tharon'ja's Protectorate",
+				ilvl: 110
 			},
 			{
 				id: 183200,
-				name: "Pitch Black Scourgestone"
+				name: "Pitch Black Scourgestone",
+				ilvl: 1
 			},
 			{
 				id: 183616,
-				name: "Accursed Keepsake"
+				name: "Accursed Keepsake",
+				ilvl: 1
 			}
 		]
 	},
@@ -506,23 +583,28 @@ var rares = [
 		loot: [
 			{
 				id: 183671,
-				name: "Necromantic Wristwraps"
+				name: "Necromantic Wristwraps",
+				ilvl: 110
 			},
 			{
 				id: 183672,
-				name: "Cuirass of Undeath"
+				name: "Cuirass of Undeath",
+				ilvl: 110
 			},
 			{
 				id: 183627,
-				name: "Summoner's Granite Gavel"
+				name: "Summoner's Granite Gavel",
+				ilvl: 110
 			},
 			{
 				id: 183200,
-				name: "Pitch Black Scourgestone"
+				name: "Pitch Black Scourgestone",
+				ilvl: 1
 			},
 			{
 				id: 183616,
-				name: "Accursed Keepsake"
+				name: "Accursed Keepsake",
+				ilvl: 1
 			}
 		]
 	},
@@ -538,23 +620,28 @@ var rares = [
 		loot: [
 			{
 				id: 183669,
-				name: "Cowl of the Rampaging Troll"
+				name: "Cowl of the Rampaging Troll",
+				ilvl: 110
 			},
 			{
 				id: 183626,
-				name: "Troll Gorer"
+				name: "Troll Gorer",
+				ilvl: 110
 			},
 			{
 				id: 183640,
-				name: "Leggings of Disreputable Charms"
+				name: "Leggings of Disreputable Charms",
+				ilvl: 110
 			},
 			{
 				id: 183200,
-				name: "Pitch Black Scourgestone"
+				name: "Pitch Black Scourgestone",
+				ilvl: 1
 			},
 			{
 				id: 183616,
-				name: "Accursed Keepsake"
+				name: "Accursed Keepsake",
+				ilvl: 1
 			}
 		]
 	},
@@ -570,23 +657,28 @@ var rares = [
 		loot: [
 			{
 				id: 183681,
-				name: "Webrending Machete"
+				name: "Webrending Machete",
+				ilvl: 110
 			},
 			{
 				id: 183682,
-				name: "Cinch of the Servant"
+				name: "Cinch of the Servant",
+				ilvl: 110
 			},
 			{
 				id: 183683,
-				name: "Skittering Vestments"
+				name: "Skittering Vestments",
+				ilvl: 110
 			},
 			{
 				id: 183200,
-				name: "Pitch Black Scourgestone"
+				name: "Pitch Black Scourgestone",
+				ilvl: 1
 			},
 			{
 				id: 183616,
-				name: "Accursed Keepsake"
+				name: "Accursed Keepsake",
+				ilvl: 1
 			}
 		]
 	},
@@ -602,23 +694,28 @@ var rares = [
 		loot: [
 			{
 				id: 183679,
-				name: "Taldaram's Supple Slippers"
+				name: "Taldaram's Supple Slippers",
+				ilvl: 110
 			},
 			{
 				id: 183677,
-				name: "Blood-Drinker's Belt"
+				name: "Blood-Drinker's Belt",
+				ilvl: 110
 			},
 			{
 				id: 183625,
-				name: "Reforged Necklace of Taldaram"
+				name: "Reforged Necklace of Taldaram",
+				ilvl: 110
 			},
 			{
 				id: 183200,
-				name: "Pitch Black Scourgestone"
+				name: "Pitch Black Scourgestone",
+				ilvl: 1
 			},
 			{
 				id: 183616,
-				name: "Accursed Keepsake"
+				name: "Accursed Keepsake",
+				ilvl: 1
 			}
 		]
 	},
@@ -634,23 +731,28 @@ var rares = [
 		loot: [
 			{
 				id: 183673,
-				name: "Nerubian Aegis Ring"
+				name: "Nerubian Aegis Ring",
+				ilvl: 110
 			},
 			{
 				id: 183641,
-				name: "Shoulderpads of Corpal Rigidity"
+				name: "Shoulderpads of Corpal Rigidity",
+				ilvl: 110
 			},
 			{
 				id: 183624,
-				name: "Serrated Blade of Nadox"
+				name: "Serrated Blade of Nadox",
+				ilvl: 110
 			},
 			{
 				id: 183200,
-				name: "Pitch Black Scourgestone"
+				name: "Pitch Black Scourgestone",
+				ilvl: 1
 			},
 			{
 				id: 183616,
-				name: "Accursed Keepsake"
+				name: "Accursed Keepsake",
+				ilvl: 1
 			}
 		]
 	}
@@ -669,7 +771,7 @@ var html = `
 				<ul>
 				{{#each loot}}
 					<li>
-						<a href="https://www.wowhead.com/item={{id}}/" target="_blank" data-wowhead="item={{id}}">{{name}}</a>
+						<a href="https://www.wowhead.com/item={{id}}/" target="_blank" data-wowhead="item={{id}}&amp;ilvl={{ilvl}}">{{name}}</a>
 					</li>
 				{{/each}}
 				</ul>
