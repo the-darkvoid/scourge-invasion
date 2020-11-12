@@ -1,34 +1,16 @@
-var tuning = 60;
+const tuning = 60;
+
+const init = {
+	rare: 174062,
+	timer: "2020-11-12T03:20:00Z"
+}
 
 var rares = [
-	{
-		name: "Elder Nadox",
-		img: "images/elder-nadox.png",
-		desc: "Elder Nadox is the first boss of Ahn'kahet: The Old Kingdom.",
-		way: "44.2 49.1",
-		timer: "2020-11-11T12:00:00Z",
-		id: 174048,
-		loot: [
-			{
-				"id": 183673,
-				"name": "Nerubian Aegis Ring"
-			},
-			{
-				"id": 183200,
-				"name": "Pitch Black Scourgestone"
-			},
-			{
-				"id": 183616,
-				"name": "Accursed Keepsake"
-			}
-		]
-	},
 	{
 		name: "Noth the Plaguebringer",
 		img: "images/noth-the-plaguebringer.png",
 		desc: "Noth the Plaguebringer is the first boss of the Plague Quarter of Naxxramas.",
 		way: "31.6 70.5",
-		timer: "2020-11-11T12:20:00Z",
 		id: 174067,
 		loot: [
 			{
@@ -54,7 +36,6 @@ var rares = [
 		img: "images/patchwerk.png",
 		desc: "Patchwerk is the first boss of the Construct Quarter of Naxxramas.",
 		way: "34.4 68.5",
-		timer: "2020-11-11T12:40:00Z",
 		id: 174066,
 		loot: [
 			{
@@ -84,7 +65,6 @@ var rares = [
 		img: "images/blood-queen-lanathel.png",
 		desc: "Blood-Queen Lana'thel is the last boss in the Crimson Hall of Icecrown Citadel.",
 		way: "49.7 32.7",
-		timer: "2020-11-11T13:00:00Z",
 		id: 174065,
 		loot: [
 			{
@@ -114,7 +94,6 @@ var rares = [
 		img: "images/professor-putricide.png",
 		desc: "Professor Putricide is the Scourge genius behind the development of all forms of blight, plague, ooze, scourge, and death delivery.",
 		way: "57.1 30.3",
-		timer: "2020-11-11T13:20:00Z",
 		id: 174064,
 		loot: [
 			{
@@ -144,7 +123,6 @@ var rares = [
 		img: "images/lady-deathwhisper.png",
 		desc: "Lady Deathwhisper is a female lich and leader of the Cult of the Damned.",
 		way: "51.1 78.5",
-		timer: "2020-11-11T13:40:00Z",
 		id: 174063,
 		loot: [
 			{
@@ -174,7 +152,6 @@ var rares = [
 		img: "images/skadi-the-ruthless.png",
 		desc: "Skadi the Ruthless is the third boss in Utgarde Pinnacle.",
 		way: "57.8 56.1",
-		timer: "2020-11-11T14:00:00Z",
 		id: 174062,
 		loot: [
 			{
@@ -208,7 +185,6 @@ var rares = [
 		img: "images/ingvar-the-plunderer.png",
 		desc: "Ingvar the Plunderer, commander of the dragon forces, is the third and last boss in Utgarde Keep.",
 		way: "52.4 52.6",
-		timer: "2020-11-11T14:20:00Z",
 		id: 174061,
 		loot: [
 			{
@@ -238,7 +214,6 @@ var rares = [
 		img: "images/prince-keleseth.png",
 		desc: "Prince Keleseth, a darkfallen, is the first boss of Utgarde Keep.",
 		way: "54.0 44.7",
-		timer: "2020-11-11T14:40:00Z",
 		id: 174060,
 		loot: [
 			{
@@ -268,7 +243,6 @@ var rares = [
 		img: "images/the-black-knight.png",
 		desc: "The Black Knight is the third and last boss of the Trial of the Champion.",
 		way: "64.8 22.1",
-		timer: "2020-11-11T15:00:00Z",
 		id: 174059,
 		loot: [
 			{
@@ -298,7 +272,6 @@ var rares = [
 		img: "images/bronjahm.png",
 		desc: "Bronhahm, the Godfather of Souls, is the first boss in The Forge of Souls. He drops <a href=\"https://www.wowhead.com/item={{id}}/\" target=\"_blank\" data-wowhead=\"item=183634\">Papa's Mint Condition bag</a>.",
 		way: "70.7 38.4",
-		timer: "2020-11-11T15:20:00Z",
 		id: 174058,
 		loot: [
 			{
@@ -332,7 +305,6 @@ var rares = [
 		img: "images/scourgelord-tyrannus.png",
 		desc: "Scourgelord Tyrannus is a human Death Knight riding the frost wyrm Rimefang.",
 		way: "47.2 66.1",
-		timer: "2020-11-11T15:40:00Z",
 		id: 174057,
 		loot: [
 			{
@@ -362,7 +334,6 @@ var rares = [
 		img: "images/forgemaster-garfrost.png",
 		desc: "Forgemaster Garfrost is a flesh giant covered with ice, whose duty is to forge saronite weapons and armor for the Scourge.",
 		way: "58.6 72.5",
-		timer: "2020-11-11T16:00:00Z",
 		id: 174056,
 		loot: [
 			{
@@ -392,7 +363,6 @@ var rares = [
 		img: "images/marwyn.png",
 		desc: "Marwyn, Arthas Menethil's second captain, is the second boss in the Halls of Reflection.",
 		way: "58.2 83.4",
-		timer: "2020-11-11T16:20:00Z",
 		id: 174055,
 		loot: [
 			{
@@ -422,7 +392,6 @@ var rares = [
 		img: "images/falric.png",
 		desc: "Falric, a captain for Arthas in both life and death, is the first boss in the Halls of Reflection.",
 		way: "50.2 87.9",
-		timer: "2020-11-11T16:40:00Z",
 		id: 174054,
 		loot: [
 			{
@@ -452,7 +421,6 @@ var rares = [
 		img: "images/the-prophet-tharonja.png",
 		desc: "Prophet Tharon'ja, a skeletal wind serpent, is the last boss of Drak'Tharon Keep.",
 		way: "80.1 61.2",
-		timer: "2020-11-11T17:00:00Z",
 		id: 174053,
 		loot: [
 			{
@@ -482,7 +450,6 @@ var rares = [
 		img: "images/novos-the-summoner.png",
 		desc: "Novos the Summoner, a lich, is the second boss of Drak'Tharon Keep.",
 		way: "77.8 66.1",
-		timer: "2020-11-11T17:20:00Z",
 		id: 174052,
 		loot: [
 			{
@@ -512,7 +479,6 @@ var rares = [
 		img: "images/trollgore.png",
 		desc: "Trollgore, a dire troll, is the first boss of Drak'Tharon Keep.",
 		way: "58.3 39.4",
-		timer: "2020-11-11T17:40:00Z",
 		id: 174051,
 		loot: [
 			{
@@ -538,7 +504,6 @@ var rares = [
 		img: "images/krikthir-the-gatewatcher.png",
 		desc: "Krik'thir the Gatewatcher is the first boss of Azjol-Nerub.",
 		way: "67.5 58.0",
-		timer: "2020-11-11T18:00:00Z",
 		id: 174050,
 		loot: [
 			{
@@ -560,7 +525,6 @@ var rares = [
 		img: "images/prince-taldaram.png",
 		desc: "Prince Taldaram, a vampiric darkfallen, is the second boss of Ahn'kahet: The Old Kingdom.",
 		way: "29.6 62.2",
-		timer: "2020-11-11T18:20:00Z",
 		id: 174049,
 		loot: [
 			{
@@ -585,6 +549,27 @@ var rares = [
 			}
 		]
 	},
+	{
+		name: "Elder Nadox",
+		img: "images/elder-nadox.png",
+		desc: "Elder Nadox is the first boss of Ahn'kahet: The Old Kingdom.",
+		way: "44.2 49.1",
+		id: 174048,
+		loot: [
+			{
+				"id": 183673,
+				"name": "Nerubian Aegis Ring"
+			},
+			{
+				"id": 183200,
+				"name": "Pitch Black Scourgestone"
+			},
+			{
+				"id": 183616,
+				"name": "Accursed Keepsake"
+			}
+		]
+	}
 ]
 
 var html = `
@@ -686,6 +671,25 @@ function refreshCards() {
 }
 
 $(function() {
+	// Initialize timers for each rare from init block
+	const initIndex = rares.findIndex(rare => rare.id == init.rare);
+
+	if (initIndex == -1) {
+		console.log(`Rare with id ${init.rare} not found.`);
+	}
+
+	const initTimer = new moment(init.timer);
+
+	rares.forEach((rare, index) => {
+		const rareTimer = initTimer.clone();
+		rareTimer.add((index - initIndex) * 20, 'minutes');
+
+		rare.timer = rareTimer.toISOString();
+		console.log(rare.timer);
+	});
+
+	console.log(rares);
+
 	refreshCards();
 
 	var clipboard = new ClipboardJS('.waypoint');
