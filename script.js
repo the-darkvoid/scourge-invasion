@@ -250,20 +250,8 @@ var rares = [
 				"name": "Keleseth's Influencer"
 			},
 			{
-				"id": 183679,
-				"name": "Taldaram's Supple Slippers"
-			},
-			{
-				"id": 183677,
-				"name": "Blood-Drinker's Belt"
-			},
-			{
 				"id": 183661,
 				"name": "Drake Stabler's Gauntlets"
-			},
-			{
-				"id": 183625,
-				"name": "Reforged Necklace of Taldaram"
 			},
 			{
 				"id": 183200,
@@ -576,24 +564,12 @@ var rares = [
 		id: 174049,
 		loot: [
 			{
-				"id": 50074,
-				"name": "Royal Crimson Cloak"
-			},
-			{
-				"id": 183678,
-				"name": "Keleseth's Influencer"
-			},
-			{
 				"id": 183679,
 				"name": "Taldaram's Supple Slippers"
 			},
 			{
 				"id": 183677,
 				"name": "Blood-Drinker's Belt"
-			},
-			{
-				"id": 183661,
-				"name": "Drake Stabler's Gauntlets"
 			},
 			{
 				"id": 183625,
