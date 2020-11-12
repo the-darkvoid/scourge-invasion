@@ -649,13 +649,13 @@ var html = `
 				</ul>
 				<div class="d-flex justify-content-between align-items-center">
 					<div class="btn-group">
-						<button type="button" class="map btn btn-sm btn-outline-primary" data-clipboard-text="/run b=C_Map;b.SetUserWaypoint(UiMapPoint.CreateFromCoordinates(118, {{way.x}}/100, {{way.y}}/100));">Map</button>
+						<button type="button" class="map waypoint btn btn-sm btn-outline-primary" data-clipboard-text="/run b=C_Map;b.SetUserWaypoint(UiMapPoint.CreateFromCoordinates(118, {{way.x}}/100, {{way.y}}/100));">Map</button>
 					</div>
 					<div class="btn-group">
-						<button type="button" class="announce btn btn-sm btn-outline-primary" data-clipboard-text="/run b=C_Map;b.SetUserWaypoint(UiMapPoint.CreateFromCoordinates(118, {{way.x}}/100, {{way.y}}/100));SendChatMessage('{{name}} at '..b.GetUserWaypointHyperlink(),'CHANNEL',_,1);">Announce</button>
+						<button type="button" class="announce waypoint btn btn-sm btn-outline-primary" data-clipboard-text="/run b=C_Map;b.SetUserWaypoint(UiMapPoint.CreateFromCoordinates(118, {{way.x}}/100, {{way.y}}/100));SendChatMessage('{{name}} at '..b.GetUserWaypointHyperlink(),'CHANNEL',_,1);">Announce</button>
 					</div>
 					<div class="btn-group">
-						<button type="button" class="tomtom btn btn-sm btn-outline-primary" data-clipboard-text="/way {{way.x}} {{way.y}}">TomTom</button>
+						<button type="button" class="tomtom waypoint btn btn-sm btn-outline-primary" data-clipboard-text="/way {{way.x}} {{way.y}}">TomTom</button>
 					</div>
 
 					<small class="text-muted">{{nextSpawnDuration}} @ {{nextSpawn}}</small>
@@ -703,7 +703,7 @@ function hideTooltip() {
 
 	setTimeout(function() {
 		$('button').tooltip('hide');
-	}, 1000);
+	}, 1500);
 
 }
 
@@ -733,11 +733,6 @@ function refreshCards() {
 		ga('send', 'event', 'cards', 'refresh');
 	}
 
-	// Reset tooltips
-	$('button.map').tooltip({ title: 'Creates a map waypoint on your map pointing to the rare.', trigger: 'hover'});
-	$('button.announce').tooltip({ title: 'Creates a map waypoint and announces it linked into the zone channel.', trigger: 'hover'});
-	$('button.tomtom').tooltip({ title: 'Creates a TomTom waypoint (requires TomTom addon).', trigger: 'hover'});
-
 	return false;
 }
 
@@ -756,17 +751,28 @@ $(function() {
 		rareTimer.add((index - initIndex) * 20, 'minutes');
 
 		rare.timer = rareTimer.toISOString();
-		console.log(rare.timer);
 	});
-
-	console.log(rares);
 
 	refreshCards();
 
 	var clipboard = new ClipboardJS('.waypoint');
 
-	clipboard.on('success', function(e) {
-		setTooltip(e.trigger, 'Copied!');
+	clipboard.on('success', function(e)
+	{
+		const trigger = $(e.trigger);
+
+		if (trigger.hasClass("map")) {
+			setTooltip(e.trigger, 'Copied script to create a map waypoint on your map pointing to the rare.');
+		}
+
+		if (trigger.hasClass("announce")) {
+			setTooltip(e.trigger, 'Copied script to create a map waypoint and announces it linked into the zone channel.');
+		}
+
+		if (trigger.hasClass("tomtom")) {
+			setTooltip(e.trigger, 'Copied script to creates a TomTom waypoint (requires TomTom addon).');
+		}
+
 		hideTooltip();
 	});
 	
