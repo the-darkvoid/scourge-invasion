@@ -665,6 +665,13 @@ var html = `
 	</div>
 `;
 
+var alert = `
+	<div class="alert alert-success alert-dismissible fade show">
+		<button type="button" class="close" data-dismiss="alert">&times;</button>
+		Command copied to your clipboard! Paste it in your World of Warcraft chatbox to use it.
+	</div>
+`;
+
 function nextSpawn(rare)
 {
 	var spawnTimer = new moment(rare.timer);
@@ -681,8 +688,6 @@ function nextSpawn(rare)
 	rare.nextSpawnMins = Math.round(duration.asMinutes());
 	rare.nextSpawnDuration = duration.humanize();
 	rare.nextSpawn = spawnTimer.format("HH:mm");
-	//if (spawnTimer < current)
-
 }
 
 function calculateSpawns()
@@ -703,7 +708,7 @@ function hideTooltip() {
 
 	setTimeout(function() {
 		$('button').tooltip('hide');
-	}, 1500);
+	}, 2000);
 
 }
 
@@ -762,16 +767,22 @@ $(function() {
 	{
 		const trigger = $(e.trigger);
 
+		var container = trigger.closest(".container");
+
+		if ($(".alert", container).length == 0) {
+			container.prepend(alert);
+		}
+
 		if (trigger.hasClass("map")) {
-			setTooltip(e.trigger, 'Copied script to create a map waypoint on your map pointing to the rare.');
+			setTooltip(e.trigger, 'Create a map waypoint on your map pointing to the rare.');
 		}
 
 		if (trigger.hasClass("announce")) {
-			setTooltip(e.trigger, 'Copied script to create a map waypoint and announces it linked into the zone channel.');
+			setTooltip(e.trigger, 'Create a map waypoint and announces it linked into the zone channel.');
 		}
 
 		if (trigger.hasClass("tomtom")) {
-			setTooltip(e.trigger, 'Copied script to creates a TomTom waypoint (requires TomTom addon).');
+			setTooltip(e.trigger, 'Create a TomTom waypoint (requires TomTom addon).');
 		}
 
 		hideTooltip();
