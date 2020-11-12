@@ -25,6 +25,10 @@ var rares = [
 				name: "Hailstone Loop"
 			},
 			{
+				id: 183654,
+				name: "Etched Dragonbone Stompers"
+			},
+			{
 				id: 183200,
 				name: "Pitch Black Scourgestone"
 			},
@@ -141,8 +145,8 @@ var rares = [
 		id: 174063,
 		loot: [
 			{
-				id: 183641,
-				name: "Shoulderpads of Corpal Rigidity"
+				id: 183652,
+				name: "Zod's Echoing Longbow"
 			},
 			{
 				id: 183653,
@@ -241,8 +245,8 @@ var rares = [
 		id: 174060,
 		loot: [
 			{
-				id: 50074,
-				name: "Royal Crimson Cloak"
+				id: 183680,
+				name: "Royal Sanguine Cloak"
 			},
 			{
 				id: 183678,
@@ -445,8 +449,8 @@ var rares = [
 				name: "Valonforth's Marred Pauldrons"
 			},
 			{
-				id: 183666,
-				name: "Legguards of the Frosty Fathoms"
+				id: 183667,
+				name: "Geistslicer"
 			},
 			{
 				id: 183200,
@@ -541,6 +545,10 @@ var rares = [
 				name: "Troll Gorer"
 			},
 			{
+				id: 183640,
+				name: "Leggings of Disreputable Charms"
+			},
+			{
 				id: 183200,
 				name: "Pitch Black Scourgestone"
 			},
@@ -563,6 +571,14 @@ var rares = [
 			{
 				id: 183681,
 				name: "Webrending Machete"
+			},
+			{
+				id: 183682,
+				name: "Cinch of the Servant"
+			},
+			{
+				id: 183683,
+				name: "Skittering Vestments"
 			},
 			{
 				id: 183200,
@@ -619,6 +635,14 @@ var rares = [
 			{
 				id: 183673,
 				name: "Nerubian Aegis Ring"
+			},
+			{
+				id: 183641,
+				name: "Shoulderpads of Corpal Rigidity"
+			},
+			{
+				id: 183624,
+				name: "Serrated Blade of Nadox"
 			},
 			{
 				id: 183200,
