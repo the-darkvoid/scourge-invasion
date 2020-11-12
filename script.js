@@ -658,8 +658,8 @@ var html = `
 						<button type="button" class="tomtom waypoint btn btn-sm btn-outline-primary" data-clipboard-text="/way {{way.x}} {{way.y}}">TomTom</button>
 					</div>
 				</div>
-				<div class="mt-2 pull-right">
-					<small class="text-muted">Spawns in {{nextSpawnDuration}} ({{nextSpawn}} local time)</small>
+				<div class="pull-right">
+					<p class="mt-3 mb-0"><i class="fa fa-clock-o"></i>&nbsp;&nbsp;Spawns in {{nextSpawnDuration}} ({{nextSpawn}} local time)</p>
 				</div>
 			</div>
 		</div>
