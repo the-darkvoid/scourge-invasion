@@ -650,13 +650,13 @@ var html = `
 				</ul>
 				<div class="d-flex justify-content-between align-items-center">
 					<div class="btn-group">
-						<button type="button" class="map waypoint btn btn-sm btn-outline-primary" data-clipboard-text="/run b=C_Map;b.SetUserWaypoint(UiMapPoint.CreateFromCoordinates(118, {{way.x}}/100, {{way.y}}/100));">Map Point</button>
+						<button type="button" class="map waypoint btn btn-sm btn-primary" data-clipboard-text="/run b=C_Map;b.SetUserWaypoint(UiMapPoint.CreateFromCoordinates(118, {{way.x}}/100, {{way.y}}/100));"><i class="fa fa-map-marker"></i>&nbsp; Map Point</button>
 					</div>
 					<div class="btn-group">
-						<button type="button" class="announce waypoint btn btn-sm btn-outline-primary" data-clipboard-text="/run b=C_Map;b.SetUserWaypoint(UiMapPoint.CreateFromCoordinates(118, {{way.x}}/100, {{way.y}}/100));SendChatMessage('{{name}} at '..b.GetUserWaypointHyperlink(),'CHANNEL',_,1);">Announce</button>
+						<button type="button" class="announce waypoint btn btn-sm btn-primary" data-clipboard-text="/run b=C_Map;b.SetUserWaypoint(UiMapPoint.CreateFromCoordinates(118, {{way.x}}/100, {{way.y}}/100));SendChatMessage('{{name}} at '..b.GetUserWaypointHyperlink(),'CHANNEL',_,1);"><i class="fa fa-commenting-o"></i>&nbsp; Announce</button>
 					</div>
 					<div class="btn-group">
-						<button type="button" class="tomtom waypoint btn btn-sm btn-outline-primary" data-clipboard-text="/way {{way.x}} {{way.y}}">TomTom</button>
+						<button type="button" class="tomtom waypoint btn btn-sm btn-primary" data-clipboard-text="/way {{way.x}} {{way.y}}"><i class="fa fa-location-arrow"></i>&nbsp; TomTom</button>
 					</div>
 				</div>
 			</div>
