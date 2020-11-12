@@ -635,7 +635,8 @@ var rares = [
 var html = `
 	<div class="col-md-4">
 		<div class="card mb-4 box-shadow" data-clarity-unmask="True">
-			<p class="mt-3 mb-0 pr-3 text-right"><i class="fa fa-clock-o"></i>&nbsp;&nbsp;Spawns in {{nextSpawnDuration}} ({{nextSpawn}} local time)</p>
+			<p class="mt-3 mb-0 pr-3 text-right"><i class="fa fa-clock-o"></i>&nbsp;&nbsp;{{spawn.next}}</p>
+			<p class="mt-3 mb-0 pr-3 text-right"><i class="fa fa-calendar-o"></i>&nbsp;&nbsp;{{spawn.subsequent}}</p>
 			<img class="card-img-top" src="{{img}}" alt="{{name}}">
 			<div class="card-body">
 				<h4><a href="https://www.wowhead.com/npc={{id}}/" target="_blank" data-wowhead="npc={{id}}">{{name}}</a></h4>
@@ -682,11 +683,14 @@ function nextSpawn(rare)
 		spawnTimer.add(400, 'minutes');
 	}
 
-	var duration = moment.duration(spawnTimer.diff(currentDate));
+	rare.spawn = {
+		next: `Spawns in ${moment.duration(spawnTimer.diff(currentDate)).humanize()} (${spawnTimer.format("HH:mm")} local time)`
+	};
 
-	rare.nextSpawnMins = Math.round(duration.asMinutes());
-	rare.nextSpawnDuration = duration.humanize();
-	rare.nextSpawn = spawnTimer.format("HH:mm");
+	spawnTimer.add(400, 'minutes');
+
+	rare.spawn.subsequent = `Next spawn in ${moment.duration(spawnTimer.diff(currentDate)).humanize()} (${spawnTimer.format("HH:mm")} local time)`;
+
 }
 
 function calculateSpawns()
