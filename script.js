@@ -635,6 +635,7 @@ var rares = [
 var html = `
 	<div class="col-md-4">
 		<div class="card mb-4 box-shadow" data-clarity-unmask="True">
+			<p class="mt-3 mb-0 pr-3 text-right"><i class="fa fa-clock-o"></i>&nbsp;&nbsp;Spawns in {{nextSpawnDuration}} ({{nextSpawn}} local time)</p>
 			<img class="card-img-top" src="{{img}}" alt="{{name}}">
 			<div class="card-body">
 				<h4><a href="https://www.wowhead.com/npc={{id}}/" target="_blank" data-wowhead="npc={{id}}">{{name}}</a></h4>
@@ -657,9 +658,6 @@ var html = `
 					<div class="btn-group">
 						<button type="button" class="tomtom waypoint btn btn-sm btn-outline-primary" data-clipboard-text="/way {{way.x}} {{way.y}}">TomTom</button>
 					</div>
-				</div>
-				<div class="pull-right">
-					<p class="mt-3 mb-0"><i class="fa fa-clock-o"></i>&nbsp;&nbsp;Spawns in {{nextSpawnDuration}} ({{nextSpawn}} local time)</p>
 				</div>
 			</div>
 		</div>
