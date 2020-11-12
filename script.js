@@ -757,7 +757,7 @@ $(function() {
 		rareTimer.add((index - initIndex) * 20, 'minutes');
 
 		rare.timer = rareTimer.toISOString();
-		rare.img = document.URL + rare.img;
+		rare.img = `${document.URL.replace('#', '')}${rare.img}`;
 	});
 
 	refreshCards();
