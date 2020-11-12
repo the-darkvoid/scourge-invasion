@@ -683,6 +683,8 @@ function nextSpawn(rare)
 		spawnTimer.add(400, 'minutes');
 	}
 
+	rare.nextSpawnMins = moment.duration(spawnTimer.diff(currentDate)).asMinutes();
+
 	rare.spawn = {
 		next: `Spawns in ${moment.duration(spawnTimer.diff(currentDate)).humanize()} (${spawnTimer.format("HH:mm")} local time)`
 	};
