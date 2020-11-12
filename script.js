@@ -637,7 +637,7 @@ var html = `
 		<div class="card mb-4 box-shadow" data-clarity-unmask="True">
 			<img class="card-img-top" src="{{img}}" alt="{{name}}">
 			<div class="card-body">
-				<h3><a href="https://www.wowhead.com/npc={{id}}/" target="_blank" data-wowhead="npc={{id}}">{{name}}</a></h3>
+				<h4><a href="https://www.wowhead.com/npc={{id}}/" target="_blank" data-wowhead="npc={{id}}">{{name}}</a></h4>
 				<p class="card-text">{{{desc}}}</p>
 				<p class="card-text">Loot:</p>
 				<ul>
@@ -756,7 +756,7 @@ $(function() {
 		rareTimer.add((index - initIndex) * 20, 'minutes');
 
 		rare.timer = rareTimer.toISOString();
-		//rare.img = document.URL + rare.img;
+		rare.img = document.URL + rare.img;
 	});
 
 	refreshCards();
@@ -771,6 +771,7 @@ $(function() {
 
 		if ($(".alert", container).length == 0) {
 			container.prepend(alert);
+			container[0].scrollIntoView(true);
 		}
 
 		if (trigger.hasClass("map")) {
