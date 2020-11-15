@@ -8,6 +8,10 @@ const init = {
 	us: {
 		rare: 174062,
 		timer: "2020-11-13T10:00:00Z"
+	},
+	au: {
+		rare: 174062,
+		timer: "2020-11-12T17:00:00Z"
 	}
 }
 
@@ -910,6 +914,7 @@ $(function() {
 	$('button.region-eu').click(function(e) {
 		$('button.region-eu').addClass('btn-primary').removeClass('btn-secondary');
 		$('button.region-us').addClass('btn-secondary').removeClass('btn-primary');
+		$('button.region-au').addClass('btn-secondary').removeClass('btn-primary');
 
 		initRegion(init.eu);
 		
@@ -920,8 +925,20 @@ $(function() {
 	$('button.region-us').click(function(e) {
 		$('button.region-us').addClass('btn-primary').removeClass('btn-secondary');
 		$('button.region-eu').addClass('btn-secondary').removeClass('btn-primary');
+		$('button.region-au').addClass('btn-secondary').removeClass('btn-primary');
 
 		initRegion(init.us);
+		
+		e.preventDefault();
+		return false;
+	});
+
+	$('button.region-au').click(function(e) {
+		$('button.region-au').addClass('btn-primary').removeClass('btn-secondary');
+		$('button.region-eu').addClass('btn-secondary').removeClass('btn-primary');
+		$('button.region-us').addClass('btn-secondary').removeClass('btn-primary');
+
+		initRegion(init.au);
 		
 		e.preventDefault();
 		return false;
