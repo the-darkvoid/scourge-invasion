@@ -1,8 +1,14 @@
 const tuning = 60;
 
 const init = {
-	rare: 174062,
-	timer: "2020-11-12T03:20:00Z"
+	eu: {
+		rare: 174062,
+		timer: "2020-11-12T03:20:00Z"
+	},
+	us: {
+		rare: 174062,
+		timer: "2020-11-13T10:00:00Z"
+	}
 }
 
 var rares = [
@@ -872,25 +878,54 @@ function refreshCards() {
 	return false;
 }
 
-$(function() {
+function initRegion(init)
+{
 	// Initialize timers for each rare from init block
 	const initIndex = rares.findIndex(rare => rare.id == init.rare);
 
 	if (initIndex == -1) {
 		console.log(`Rare with id ${init.rare} not found.`);
 	}
-
+	
 	const initTimer = new moment(init.timer);
-
+	
 	rares.forEach((rare, index) => {
 		const rareTimer = initTimer.clone();
 		rareTimer.add((index - initIndex) * 20, 'minutes');
-
+	
 		rare.timer = rareTimer.toISOString();
+	});
+	
+	refreshCards();
+}
+
+$(function() {
+
+	rares.forEach((rare, index) => {
 		rare.img = `${document.URL.replace('#', '')}${rare.img}`;
 	});
 
-	refreshCards();
+	initRegion(init.eu);
+
+	$('button.region-eu').click(function(e) {
+		$('button.region-eu').addClass('btn-primary').removeClass('btn-secondary');
+		$('button.region-us').addClass('btn-secondary').removeClass('btn-primary');
+
+		initRegion(init.eu);
+		
+		e.preventDefault();
+		return false;
+	});
+
+	$('button.region-us').click(function(e) {
+		$('button.region-us').addClass('btn-primary').removeClass('btn-secondary');
+		$('button.region-eu').addClass('btn-secondary').removeClass('btn-primary');
+
+		initRegion(init.us);
+		
+		e.preventDefault();
+		return false;
+	});
 
 	var clipboard = new ClipboardJS('.waypoint');
 
