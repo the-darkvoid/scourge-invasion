@@ -959,5 +959,9 @@ $(function() {
 		setTooltip(e.trigger, 'Failed!');
 		hideTooltip(e.trigger);
 	});
+
+	if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+		$("<style type='text/css'> .card .card-body button { display: none; } </style>").appendTo("head");
+	}
 })
 
