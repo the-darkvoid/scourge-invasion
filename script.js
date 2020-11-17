@@ -880,7 +880,7 @@ function refreshCards() {
 	const currentDate = new moment();
 	const lastSpawn = new moment().subtract(lastRare.nextSpawnMins - 200, "minutes");
 
-	lastRare.spawn.next = `<span class="spawned">Spawned ${moment.duration(lastSpawn.diff(currentDate)).humanize()} ago (${lastSpawn.format("HH:mm")} local time)</span>`;
+	lastRare.spawn.next = `<span class="spawned">Spawned ${moment.duration(lastSpawn.diff(currentDate)).humanize()} ago.</span>`;
 	delete lastRare.spawn.subsequent;
 
 	$("#cards").prepend(template(lastRare));
