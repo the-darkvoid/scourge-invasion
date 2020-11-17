@@ -2,15 +2,15 @@ const tuning = 60;
 
 const init = {
 	eu: {
-		rare: 174056,
-		timer: "2020-11-12T03:10:00Z"
+		rare: 174053,
+		timer: "2020-11-17T04:00:00Z"
 	},
 	us: {
-		rare: 174056,
-		timer: "2020-11-13T10:00:00Z"
+		rare: 174061,
+		timer: "2020-11-17T04:00:00Z"
 	},
 	au: {
-		rare: 174056,
+		rare: 174062,
 		timer: "2020-11-12T22:40:00Z"
 	}
 }
@@ -900,7 +900,7 @@ function initRegion(init)
 	
 	rares.forEach((rare, index) => {
 		const rareTimer = initTimer.clone();
-		rareTimer.add((index - initIndex) * 20, 'minutes');
+		rareTimer.add((index - initIndex) * 10, 'minutes');
 	
 		rare.timer = rareTimer.toISOString();
 	});
