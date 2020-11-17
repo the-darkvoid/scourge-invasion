@@ -202,6 +202,7 @@ var rares = [
 		]
 	},
 	{
+		special: true,
 		name: "Skadi the Ruthless",
 		img: "images/skadi-the-ruthless.png",
 		desc: "Skadi the Ruthless is the third boss in Utgarde Pinnacle. He can drop the mount <a href=\"https://www.wowhead.com/item=44151/\" target=\"_blank\" data-wowhead=\"item=44151\">Reins of the Blue Proto-Drake</a>.",
@@ -355,6 +356,7 @@ var rares = [
 		]
 	},
 	{
+		special: true,
 		name: "Bronjahm",
 		img: "images/bronjahm.png",
 		desc: "Bronjahm, the Godfather of Souls, is the first boss in The Forge of Souls. He can drop <a href=\"https://www.wowhead.com/item=183634/\" target=\"_blank\" data-wowhead=\"item=183634\">Papa's Mint Condition bag</a>.",
@@ -779,7 +781,12 @@ var html = `
 			{{/if}}
 			<img class="card-img-top" src="{{img}}" alt="{{name}}">
 			<div class="card-body">
-				<h4><a href="https://www.wowhead.com/npc={{id}}/" target="_blank" data-wowhead="npc={{id}}">{{name}}</a></h4>
+				<h4>
+					{{#if special}}
+					<i class="fa fa-star-o"></i>&nbsp;&nbsp;
+					{{/if}}
+					<a href="https://www.wowhead.com/npc={{id}}/" target="_blank" data-wowhead="npc={{id}}">{{name}}</a>
+				</h4>
 				<p class="card-text">{{{desc}}}</p>
 				<p class="card-text">Loot:</p>
 				<ul>
