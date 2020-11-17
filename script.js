@@ -771,8 +771,12 @@ var rares = [
 var html = `
 	<div class="col-md-4">
 		<div class="card mb-4 box-shadow" data-clarity-unmask="True">
-			<p class="mt-3 mb-0 pr-3 text-right"><i class="fa fa-clock-o"></i>&nbsp;&nbsp;{{spawn.next}}</p>
+			<p class="mt-3 mb-0 pr-3 text-right"><i class="fa fa-clock-o"></i>&nbsp;&nbsp;{{{spawn.next}}}</p>
+			{{#if spawn.subsequent}}
 			<p class="mt-3 mb-0 pr-3 text-right"><i class="fa fa-calendar-o"></i>&nbsp;&nbsp;{{spawn.subsequent}}</p>
+			{{else}}
+			<p class="mt-3 mb-0 pr-3 text-right">&nbsp;</p>
+			{{/if}}
 			<img class="card-img-top" src="{{img}}" alt="{{name}}">
 			<div class="card-body">
 				<h4><a href="https://www.wowhead.com/npc={{id}}/" target="_blank" data-wowhead="npc={{id}}">{{name}}</a></h4>
@@ -860,15 +864,26 @@ function refreshCards() {
 	calculateSpawns();
 
 	// Sort rares on spawn timers
-	rares.sort((a, b) => (a.nextSpawnMins > b.nextSpawnMins) ? 1 : -1)
+	rares.sort((a, b) => (a.nextSpawnMins > b.nextSpawnMins) ? 1 : -1);
 
 	// compile the template
-	var template = Handlebars.compile(html);
+	const template = Handlebars.compile(html);
 
 	// execute the compiled template and print the output to the console
 	for (rare of rares) {
 		$("#cards").append(template(rare));
 	}
+
+	// replicate the last rare which spawned in front
+	const lastRare = Object.assign({}, rares[rares.length - 1]);
+
+	const currentDate = new moment();
+	const lastSpawn = new moment().subtract(lastRare.nextSpawnMins - 200, "minutes");
+
+	lastRare.spawn.next = `<span class="spawned">Spawned ${moment.duration(lastSpawn.diff(currentDate)).humanize()} ago (${lastSpawn.format("HH:mm")} local time)</span>`;
+	delete lastRare.spawn.subsequent;
+
+	$("#cards").prepend(template(lastRare));
 
 	$('.waypoint').tooltip({
 		trigger: 'click',
