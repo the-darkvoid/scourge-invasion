@@ -772,7 +772,7 @@ var rares = [
 
 var html = `
 	<div class="col-md-4">
-		<div class="card mb-4 box-shadow {{#if special}}border-alert{{/if}}" data-clarity-unmask="True">
+		<div class="card mb-4 box-shadow" data-clarity-unmask="True">
 			<div class="card-header bg-transparent border-light pr-0">
 				<p class="mb-0 pr-3 text-right"><i class="fa fa-clock-o"></i>&nbsp;&nbsp;{{{spawn.next}}}</p>
 				{{#if spawn.subsequent}}
@@ -782,23 +782,24 @@ var html = `
 				{{/if}}
 			</div>
 			<img class="card-img-top" src="{{img}}" alt="{{name}}">
-			<div class="card-body">
-				<h4>
+			<div class="card-body pb-0">
+				<h4 class="card-title">
 					{{#if special}}
 					<i class="fa fa-star"></i>&nbsp;&nbsp;
 					{{/if}}
 					<a href="https://www.wowhead.com/npc={{id}}/" target="_blank" data-wowhead="npc={{id}}">{{name}}</a>
 				</h4>
-				<p class="card-text">{{{desc}}}</p>
-				<p class="card-text">Loot:</p>
-				<ul>
-				{{#each loot}}
-					<li>
-						<a href="https://www.wowhead.com/item={{id}}/" target="_blank" data-wowhead="item={{id}}&amp;ilvl={{ilvl}}">{{name}}</a>
-					</li>
-				{{/each}}
-				</ul>
+				<div class="card-text">
+					<p>{{{desc}}}</p>
+				</div>
 			</div>
+			<ul class="list-group list-group-flush">
+			{{#each loot}}
+				<li class="list-group-item">
+					<a href="https://www.wowhead.com/item={{id}}/" target="_blank" data-wowhead="item={{id}}&amp;ilvl={{ilvl}}">{{name}}</a>
+				</li>
+			{{/each}}
+			</ul>
 			<div class="card-footer bg-transparent d-flex justify-content-between align-items-center">
 				<div class="btn-group">
 					<button type="button" class="map waypoint btn btn-sm btn-primary" data-clipboard-text="/run b=C_Map;b.SetUserWaypoint(UiMapPoint.CreateFromCoordinates(118, {{way.x}}/100, {{way.y}}/100));"><i class="fa fa-map-marker"></i>&nbsp; Map Point</button>
