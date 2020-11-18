@@ -802,13 +802,13 @@ var html = `
 			</ul>
 			<div class="card-footer bg-transparent d-flex justify-content-between align-items-center">
 				<div class="btn-group">
-					<button type="button" class="map waypoint btn btn-sm btn-primary" data-clipboard-text="/run b=C_Map;b.SetUserWaypoint(UiMapPoint.CreateFromCoordinates(118, {{way.x}}/100, {{way.y}}/100));"><i class="fa fa-map-marker"></i>&nbsp; Map Point</button>
+					<button type="button" class="map waypoint btn btn-sm btn-primary" data-npc="{{id}}" data-clipboard-text="/run b=C_Map;b.SetUserWaypoint(UiMapPoint.CreateFromCoordinates(118, {{way.x}}/100, {{way.y}}/100));"><i class="fa fa-map-marker"></i>&nbsp; Map Point</button>
 				</div>
 				<div class="btn-group">
-					<button type="button" class="announce waypoint btn btn-sm btn-primary" data-clipboard-text="/run b=C_Map;b.SetUserWaypoint(UiMapPoint.CreateFromCoordinates(118, {{way.x}}/100, {{way.y}}/100));SendChatMessage('{{name}} at '..b.GetUserWaypointHyperlink(),'CHANNEL',_,1);"><i class="fa fa-commenting-o"></i>&nbsp; Announce</button>
+					<button type="button" class="announce waypoint btn btn-sm btn-primary" data-npc="{{id}}" data-clipboard-text="/run b=C_Map;b.SetUserWaypoint(UiMapPoint.CreateFromCoordinates(118, {{way.x}}/100, {{way.y}}/100));SendChatMessage('{{name}} at '..b.GetUserWaypointHyperlink(),'CHANNEL',_,1);"><i class="fa fa-commenting-o"></i>&nbsp; Announce</button>
 				</div>
 				<div class="btn-group">
-					<button type="button" class="tomtom waypoint btn btn-sm btn-primary" data-clipboard-text="/way {{way.x}} {{way.y}}"><i class="fa fa-location-arrow"></i>&nbsp; TomTom</button>
+					<button type="button" class="tomtom waypoint btn btn-sm btn-primary" data-npc="{{id}}" data-clipboard-text="/way {{way.x}} {{way.y}}"><i class="fa fa-location-arrow"></i>&nbsp; TomTom</button>
 				</div>
 			</div>
 		</div>
@@ -868,9 +868,9 @@ function hideTooltip(button) {
 }
 
 function refreshCards() {
-	$("button .fa-refresh").addClass("fa-spin");
+	$('button .fa-refresh').addClass('fa-spin');
 
-	$("#cards").empty();
+	$('#cards').empty();
 
 	// Calculate upcoming spawn timers
 	calculateSpawns();
@@ -912,7 +912,7 @@ function refreshCards() {
 	}
 
 	setTimeout(() => {
-		$("button .fa-refresh").removeClass("fa-spin");
+		$('button .fa-refresh').removeClass('fa-spin');
 	}, 1000);
 
 	return false;
@@ -985,24 +985,38 @@ $(function() {
 	clipboard.on('success', function(e)
 	{
 		const trigger = $(e.trigger);
+		const rare = rares.find(r => r.id == trigger.data('npc'));
+		var category = '';
 
-		var container = trigger.closest(".container");
+		var container = trigger.closest('.container');
 
-		if ($(".alert", container).length == 0) {
+		if ($('.alert', container).length == 0) {
 			container.prepend(alert);
 			container[0].scrollIntoView(true);
 		}
 
-		if (trigger.hasClass("map")) {
+		if (trigger.hasClass('map')) {
+			category = 'map';
 			setTooltip(e.trigger, 'Create a map waypoint on your map pointing to the rare.');
 		}
 
-		if (trigger.hasClass("announce")) {
+		if (trigger.hasClass('announce')) {
+			category = 'announce';
 			setTooltip(e.trigger, 'Create a map waypoint and announces it linked into the zone channel.');
 		}
 
-		if (trigger.hasClass("tomtom")) {
+		if (trigger.hasClass('tomtom')) {
+			category = 'tomtom';
 			setTooltip(e.trigger, 'Create a TomTom waypoint (requires TomTom addon).');
+		}
+
+		if (typeof gtag !== 'undefined') {
+
+			gtag('event', 'card_interaction', {
+				'event_category': category,
+				'event_label': rare.name
+			});
+
 		}
 
 		hideTooltip(e.trigger);
@@ -1014,7 +1028,7 @@ $(function() {
 	});
 
 	if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
-		$("<style type='text/css'> .card .card-body button { display: none; } </style>").appendTo("head");
+		$("<style type='text/css'> .card .card-body button { display: none; } </style>").appendTo('head');
 	}
 })
 
