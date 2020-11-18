@@ -867,6 +867,8 @@ function hideTooltip(button) {
 }
 
 function refreshCards() {
+	$("button .fa-refresh").addClass("fa-spin");
+
 	$("#cards").empty();
 
 	// Calculate upcoming spawn timers
@@ -907,6 +909,10 @@ function refreshCards() {
 		});
 
 	}
+
+	setTimeout(() => {
+		$("button .fa-refresh").removeClass("fa-spin");
+	}, 1000);
 
 	return false;
 }
